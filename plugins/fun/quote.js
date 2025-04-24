@@ -1,14 +1,14 @@
 import fetch from 'node-fetch'
 let handler  = async (m, { conn, usedPrefix, command }) => {
     let shizokeys = 'shizo'        
-  let res = await fetch(`https://api.shizo.top/api/quote/dare?apikey=${shizokeys}`)
+  let res = await fetch(`https://api.shizo.top/api/quote/quotes?apikey=${shizokeys}`)
   if (!res.ok) throw await res.text()
             let json = await res.json()
   let shizodevs = `${json.result}`
-  dualButtons(conn, m, shizodevs, copyright, "Dare ✊️", `${usedPrefix}${command}`, "Truth 💯", `${usedPrefix}truth`)
+  singleButton(conn, m, shizodevs, copyright, "Quotes 🔖", `${usedPrefix}${command}`)
 }
-handler.help = ['dare']
+handler.help = ['quote']
 handler.tags = ['fun']
-handler.command = /^(dare|deare)$/i
+handler.command = /^(quotes|quote|quote)$/i
 
 export default handler
