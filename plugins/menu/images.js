@@ -7,11 +7,12 @@ import {
 } from '../../lib/plugins.js'
 
 let tags = {
-'fun': '😂 Funs'
+'anime': 'Anime 🎍',
+'pies': 'Pies 🥵'
 }
 
 const defaultMenu = {
-  before: `┏━━━ ❮❮ 𝐹𝑢𝑛 𝑚𝑒𝑛𝑢 ❯❯
+  before: `┏━━━ ❮❮ 𝑖𝑚𝑎𝑔𝑒 𝑚𝑒𝑛𝑢 ❯❯
 ┃⫹⫺ *𝙽𝚊𝚖𝚎:* ${global.botname}
 ┃⫹⫺ *𝚃𝚘𝚝𝚊𝚕:* Images
 ┃⫹⫺ *𝚅𝚎𝚛𝚜𝚒𝚘𝚗:* V1.4.3
@@ -86,28 +87,108 @@ let replace = {
           title: "Select an Option",
                    sections: [
   {
-    title: "😂 Fun Menu",
+    title: "🎍 Anime Images",
     rows: [
       {
-        title: "Quotes",
+        title: "Annie",
         description: "",
-        id: usedPrefix + "quote"
+        id: usedPrefix + "annie"
       },
       {
-        title: "truth",
+        title: "Husbu",
         description: "",
-        id: usedPrefix + "truth"
+        id: usedPrefix + "husbu"
       },
       {
-        title: "flirt",
+        title: "Loli",
         description: "",
-        id: usedPrefix + "flirt"
+        id: usedPrefix + "loli"
       },
       {
-        title: "Shayari",
+        title: "Mikasa",
         description: "",
-        id: usedPrefix + "shayari"
+        id: usedPrefix + "mikasa"
       },
+      {
+        title: "Nami",
+        description: "",
+        id: usedPrefix + "nami"
+      },
+      {
+        title: "Neko",
+        description: "",
+        id: usedPrefix + "neko"
+      },
+      {
+        title: "Sakura",
+        description: "",
+        id: usedPrefix + "sakura"
+      },
+      {
+        title: "Sasha",
+        description: "",
+        id: usedPrefix + "sasha"
+      },
+      {
+        title: "Shota",
+        description: "",
+        id: usedPrefix + "shota"
+      },
+      {
+        title: "Vivi",
+        description: "",
+        id: usedPrefix + "vivi"
+      },
+      {
+        title: "Waifu",
+        description: "",
+        id: usedPrefix + "waifu"
+      },
+    ]
+  },
+  {
+    title: "🥵 Hot Pies Images",
+    rows: [
+      {
+        title: "India",
+        description: "",
+        id: usedPrefix + "india"
+      },
+      {
+        title: "Indonesia",
+        description: "",
+        id: usedPrefix + "indonesia"
+      },
+      {
+        title: "China",
+        description: "",
+        id: usedPrefix + "china"
+      },
+      {
+        title: "Japan",
+        description: "",
+        id: usedPrefix + "japan"
+      },
+      {
+        title: "Korea",
+        description: "",
+        id: usedPrefix + "korea"
+      },
+      {
+        title: "Malaysia",
+        description: "",
+        id: usedPrefix + "malaysia"
+      },
+      {
+        title: "Vietnam",
+        description: "",
+        id: usedPrefix + "vietnam"
+      },
+      {
+        title: "Thailand",
+        description: "",
+        id: usedPrefix + "thailand"
+      }
     ]
   }
 ]
@@ -123,9 +204,9 @@ let replace = {
     conn.sendMessage(shizojid, { image: { url: "https://imgur.com/WnKjrJt" }, caption: "*!! Unfortunately an Unknown Error Occured 🐞 !!*" + "\n\n" + e }, { quoted: m })
   }
 }
-handler.help = ['mfun']
+handler.help = ['mimage']
 handler.tags = ['menu']
-handler.command = /^(mfun|mfuns)$/i
+handler.command = /^(mimage|mimages)$/i
 //handler.register = true
 export default handler
 

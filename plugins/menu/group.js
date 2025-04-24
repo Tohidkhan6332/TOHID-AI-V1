@@ -7,13 +7,13 @@ import {
 } from '../../lib/plugins.js'
 
 let tags = {
-'fun': '😂 Funs'
+'group': 'Groups 🔖'
 }
 
 const defaultMenu = {
-  before: `┏━━━ ❮❮ 𝐹𝑢𝑛 𝑚𝑒𝑛𝑢 ❯❯
+  before: `┏━━━ ❮❮ 𝑔𝑟𝑜𝑢𝑝 𝑚𝑒𝑛𝑢 ❯❯
 ┃⫹⫺ *𝙽𝚊𝚖𝚎:* ${global.botname}
-┃⫹⫺ *𝚃𝚘𝚝𝚊𝚕:* Images
+┃⫹⫺ *𝚃𝚘𝚝𝚊𝚕:* Group
 ┃⫹⫺ *𝚅𝚎𝚛𝚜𝚒𝚘𝚗:* V1.4.3
 ┃⫹⫺ *𝙿𝚛𝚎𝚏𝚒𝚡:* Multi Prefix 
 ┃⫹⫺ *𝙾𝚠𝚗𝚎𝚛:* ${global.author}
@@ -86,28 +86,18 @@ let replace = {
           title: "Select an Option",
                    sections: [
   {
-    title: "😂 Fun Menu",
+    title: "🔖 Main Menu",
     rows: [
       {
-        title: "Quotes",
-        description: "",
-        id: usedPrefix + "quote"
+        title: "🖼 Group Profile Pic",
+        description: "Get Group Profile picture as Image",
+        id: usedPrefix + "getppgc"
       },
       {
-        title: "truth",
-        description: "",
-        id: usedPrefix + "truth"
-      },
-      {
-        title: "flirt",
-        description: "",
-        id: usedPrefix + "flirt"
-      },
-      {
-        title: "Shayari",
-        description: "",
-        id: usedPrefix + "shayari"
-      },
+        title: "🎆 Reset Link",
+        description: "Reset or Revoke the group link",
+        id: usedPrefix + "revoke"
+      }
     ]
   }
 ]
@@ -116,16 +106,16 @@ let replace = {
     }
   ];
   let url = "https://imgur.com/WnKjrJt"
- menuDualButtons(conn, m, url, shizobabe, global.copyright, "🌹 Script", `${usedPrefix}script`, "Owner 🌕", `${usedPrefix}owner`, flowActions)
+ menuDualButtons(conn, m, url, shizobabe, global.copyright, "🌹 Script", `${usedPrefix}script`, "Admins 🌕", `${usedPrefix}staff`, flowActions)
   
 } catch (e) {
     conn.sendMessage(m.chat, { image: { url: "https://imgur.com/WnKjrJt" }, caption: "*!! Unfortunately an Unknown Error Occured 🐞 !!*" }, { quoted: m })
     conn.sendMessage(shizojid, { image: { url: "https://imgur.com/WnKjrJt" }, caption: "*!! Unfortunately an Unknown Error Occured 🐞 !!*" + "\n\n" + e }, { quoted: m })
   }
 }
-handler.help = ['mfun']
+handler.help = ['mgroup']
 handler.tags = ['menu']
-handler.command = /^(mfun|mfuns)$/i
+handler.command = /^(mgroup)$/i
 //handler.register = true
 export default handler
 

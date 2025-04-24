@@ -7,13 +7,13 @@ import {
 } from '../../lib/plugins.js'
 
 let tags = {
-'fun': '😂 Funs'
+'tools': 'tools 🔖'
 }
 
 const defaultMenu = {
-  before: `┏━━━ ❮❮ 𝐹𝑢𝑛 𝑚𝑒𝑛𝑢 ❯❯
+  before: `┏━━━ ❮❮ 𝑡𝑜𝑜𝑙𝑠 𝑚𝑒𝑛𝑢 ❯❯
 ┃⫹⫺ *𝙽𝚊𝚖𝚎:* ${global.botname}
-┃⫹⫺ *𝚃𝚘𝚝𝚊𝚕:* Images
+┃⫹⫺ *𝚃𝚘𝚝𝚊𝚕:* tools
 ┃⫹⫺ *𝚅𝚎𝚛𝚜𝚒𝚘𝚗:* V1.4.3
 ┃⫹⫺ *𝙿𝚛𝚎𝚏𝚒𝚡:* Multi Prefix 
 ┃⫹⫺ *𝙾𝚠𝚗𝚎𝚛:* ${global.author}
@@ -86,28 +86,18 @@ let replace = {
           title: "Select an Option",
                    sections: [
   {
-    title: "😂 Fun Menu",
+    title: "🔖 Main Menu",
     rows: [
       {
-        title: "Quotes",
-        description: "",
-        id: usedPrefix + "quote"
+        title: "🗃 Database",
+        description: "Get Database Users details",
+        id: usedPrefix + "database"
       },
       {
-        title: "truth",
-        description: "",
-        id: usedPrefix + "truth"
-      },
-      {
-        title: "flirt",
-        description: "",
-        id: usedPrefix + "flirt"
-      },
-      {
-        title: "Shayari",
-        description: "",
-        id: usedPrefix + "shayari"
-      },
+        title: "🎆 ReadMore",
+        description: "Spoil someones like the example",
+        id: usedPrefix + "readmore I love You|tube"
+      }
     ]
   }
 ]
@@ -123,9 +113,9 @@ let replace = {
     conn.sendMessage(shizojid, { image: { url: "https://imgur.com/WnKjrJt" }, caption: "*!! Unfortunately an Unknown Error Occured 🐞 !!*" + "\n\n" + e }, { quoted: m })
   }
 }
-handler.help = ['mfun']
+handler.help = ['mtools']
 handler.tags = ['menu']
-handler.command = /^(mfun|mfuns)$/i
+handler.command = /^(mtools|mtool)$/i
 //handler.register = true
 export default handler
 

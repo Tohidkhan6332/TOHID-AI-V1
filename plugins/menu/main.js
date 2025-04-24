@@ -7,13 +7,18 @@ import {
 } from '../../lib/plugins.js'
 
 let tags = {
-'fun': '😂 Funs'
+'menu': 'Main 🔖',
+'ai': 'AI 🤖',
+'group': 'Groups 🔖',
+'fun': 'Fun 🎆',
+'anime': 'Anime 🎍',
+'pies': 'Pies 🥵'
 }
 
 const defaultMenu = {
-  before: `┏━━━ ❮❮ 𝐹𝑢𝑛 𝑚𝑒𝑛𝑢 ❯❯
+  before: `┏━━━ ❮❮ 𝑚𝑒𝑛𝑢 ❯❯
 ┃⫹⫺ *𝙽𝚊𝚖𝚎:* ${global.botname}
-┃⫹⫺ *𝚃𝚘𝚝𝚊𝚕:* Images
+┃⫹⫺ *𝚃𝚘𝚝𝚊𝚕:* xx+ Features
 ┃⫹⫺ *𝚅𝚎𝚛𝚜𝚒𝚘𝚗:* V1.4.3
 ┃⫹⫺ *𝙿𝚛𝚎𝚏𝚒𝚡:* Multi Prefix 
 ┃⫹⫺ *𝙾𝚠𝚗𝚎𝚛:* ${global.author}
@@ -75,7 +80,7 @@ let replace = {
  
    let shizobabe = text.replace()
    let usedPrefix = _p
-  const flowActions = [
+   const flowActions = [
     {
       buttonId: "singleSelect",
       buttonText: { displayText: "Single Select" },
@@ -86,28 +91,33 @@ let replace = {
           title: "Select an Option",
                    sections: [
   {
-    title: "😂 Fun Menu",
+    title: "🔖 Main Menu",
     rows: [
       {
-        title: "Quotes",
-        description: "",
-        id: usedPrefix + "quote"
+        title: "🎍 Anime & FanArts",
+        description: "Menu List of Anime and Fanarts that are available 🐱",
+        id: usedPrefix + "mimages"
       },
       {
-        title: "truth",
-        description: "",
-        id: usedPrefix + "truth"
+        title: "🎆 Fun features",
+        description: "Fun and Quotes Features that are available",
+        id: usedPrefix + "mfun"
       },
       {
-        title: "flirt",
-        description: "",
-        id: usedPrefix + "flirt"
+        title: "⚒️ TOOLS ",
+        description: "Important Tools Features Menu",
+        id: usedPrefix + "mtool"
       },
       {
-        title: "Shayari",
-        description: "",
-        id: usedPrefix + "shayari"
+        title: "🎮 GAMES",
+        description: "Gamezone features menu",
+        id: usedPrefix + "mgame"
       },
+      {
+        title: "👥 GROUPS",
+        description: "Group menu features",
+        id: usedPrefix + "mgroup"
+      }
     ]
   }
 ]
@@ -115,6 +125,8 @@ let replace = {
       }
     }
   ];
+  
+
   let url = "https://imgur.com/WnKjrJt"
  menuDualButtons(conn, m, url, shizobabe, global.copyright, "🌹 Script", `${usedPrefix}script`, "Owner 🌕", `${usedPrefix}owner`, flowActions)
   
@@ -123,9 +135,9 @@ let replace = {
     conn.sendMessage(shizojid, { image: { url: "https://imgur.com/WnKjrJt" }, caption: "*!! Unfortunately an Unknown Error Occured 🐞 !!*" + "\n\n" + e }, { quoted: m })
   }
 }
-handler.help = ['mfun']
+handler.help = ['menu', 'help']
 handler.tags = ['menu']
-handler.command = /^(mfun|mfuns)$/i
+handler.command = /^(menu|help)$/i
 //handler.register = true
 export default handler
 
