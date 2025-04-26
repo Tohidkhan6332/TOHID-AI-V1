@@ -17,6 +17,7 @@ global.db = db
 global.copyright = process.env.COPYRIGHT || "©𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝚃𝙾𝙷𝙸𝙳-𝙰𝙸-𝚅𝟷"
 global.author = process.env.OWNER_NAME || 'TOHID KHAN'
 global.botname = process.env.BOT_NAME || 'TOHID-AI-V1'
+global.SESSION_ID = process.env.SESSION_ID || '' ;  // put your session id here
 global.oname = author
 global.bname = botname
 
